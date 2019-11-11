@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class AlumniList extends Component {
 
     componentDidMount() {
-        this.props.getAlumni()
+        this.props.getAlumni();
     }
 
 
@@ -13,9 +13,18 @@ class AlumniList extends Component {
         return (
             <div>
                 <h1>Alumni List</h1>
+                { this.props.alumni.map(alumni =>
+                    <p> { alumni.name }</p>
+                ) };
             </div>
-        )
+        );
     }
 }
 
-export default connect(null,{ getAlumni })(AlumniList);
+const mapStateToProps = (state) => {
+    return {
+        alumni: state
+    }
+}
+
+export default connect(mapStateToProps,{ getAlumni })(AlumniList);
