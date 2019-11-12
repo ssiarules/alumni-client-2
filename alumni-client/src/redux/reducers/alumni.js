@@ -6,7 +6,7 @@ export default (state = [],action) => {
         case "ALUMNI_CREATE_SUCCESS":
             return [...state,action.payload];
         case "ALUMNI_DELETE_SUCCESS":
-            return state.filter(alumni => alumni.id !=== action.payload)
+            return state.filter(alumni => alumni.id !== action.payload)
         default:
             return state;
     }
