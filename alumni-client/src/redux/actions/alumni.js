@@ -1,3 +1,4 @@
+
 export const getAlumni = () => {
     return function(dispatch) {
 
@@ -9,4 +10,20 @@ export const getAlumni = () => {
     };
 };
 
-export const createAlumni = () => { };
+export const createAlumni = (alumniObject) => {
+    console.log(alumniObject)
+    return dispatch => {
+        fetch(`http://localhost:3001/alumnus`,{
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ alumni: alumniObject })
+        })
+            .then(res => res.json())
+            .then(alumni => dispatch({
+                type: 'ALUMNI_CREATE_SUCCESS',payload: alumni
+            }))
+    };
+};

@@ -5,8 +5,14 @@ import { BrowserRouter as Router,Route } from 'react-router-dom';
 import Home from './components/Home';
 import NewAlumniForm from "./components/NewAlumniForm";
 import AlumniList from './containers/AlumniList';
+import { connect } from 'react-redux';
+import { getAlumni } from './redux/actions/alumni';
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.getAlumni();
+  }
   render() {
     return (
       <div className="App" >
@@ -21,4 +27,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default connect(null,{ getAlumni })(App);
