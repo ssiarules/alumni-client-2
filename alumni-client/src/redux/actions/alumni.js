@@ -8,3 +8,5 @@ export const getAlumni = () => {
 
     };
 };
+
+export const createAlumni = () => { };

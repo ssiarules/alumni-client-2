@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router,Route } from 'react-router-dom';
 import Home from './components/Home';
+import NewAlumniForm from "./components/NewAlumniForm";
 import AlumniList from './containers/AlumniList';
 
 class App extends React.Component {
@@ -12,8 +13,9 @@ class App extends React.Component {
         <Router>
           <Route exact path="/" component={ Home } />
           <Route exact path="/alumni" component={ AlumniList } />
+          <Route path="/alumni/new" component={ NewAlumniForm } />
         </Router>
-      </div>
+      </div >
     );
   }
 }

@@ -14,8 +14,17 @@ class AlumniList extends Component {
             <div>
                 <h1>Alumni List</h1>
                 { this.props.alumni.map(alumni =>
-                    <p> { alumni.name }, { alumni.college }</p>
-                ) };
+                    <p>
+                        { alumni.name },
+                        { alumni.yearGraduated },
+                        { alumni.college },
+                        { alumni.profession },
+                        { alumni.sportsPlayedInHighSchool },
+                        { alumni.currentlyLiving },
+                        { alumni.hobbies }
+                    </p>
+                )
+                };
             </div>
         );
     }
