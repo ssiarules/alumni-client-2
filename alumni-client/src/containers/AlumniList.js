@@ -1,18 +1,15 @@
 import React,{ Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class AlumniList extends Component {
-
-
-
-
     render() {
         return (
             <div>
                 <h1>Alumni List</h1>
-                { this.props.alumni.map(alumni =>
-                    <p>
-                        { alumni.name },
+                { this.props.alumni.map(alumni => (
+                    <p key={ alumni.id }>
+                        < Link to={ `/alumni/${ alumni.id }` }>{ alumni.name } </Link>,
                         { alumni.yearGraduated },
                         { alumni.college },
                         { alumni.profession },
@@ -20,8 +17,7 @@ class AlumniList extends Component {
                         { alumni.currentlyLiving },
                         { alumni.hobbies }
                     </p>
-                )
-                };
+                )) };
             </div>
         );
     }

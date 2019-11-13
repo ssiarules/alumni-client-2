@@ -5,6 +5,7 @@ import { BrowserRouter as Router,Route } from 'react-router-dom';
 import Home from './components/Home';
 import NewAlumniForm from "./components/NewAlumniForm";
 import AlumniShow from './components/AlumniShow';
+import Navbar from './components/Navbar';
 import AlumniList from './containers/AlumniList';
 import { connect } from 'react-redux';
 import { getAlumni } from './redux/actions/alumni';
@@ -19,6 +20,7 @@ class App extends React.Component {
     return (
       <div className="App" >
         <Router>
+          <Navbar />
           <Route exact path="/" component={ Home } />
           <Route exact path="/alumni" component={ AlumniList } />
           <Route path="/alumni/new" component={ NewAlumniForm } />
