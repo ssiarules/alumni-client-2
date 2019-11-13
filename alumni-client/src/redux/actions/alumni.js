@@ -27,3 +27,16 @@ export const createAlumni = (alumniObject) => {
             }))
     };
 };
+
+export const deleteAlumni = id => {
+    return dispatch => {
+        fetch(`http://localhost:3001/alumnus/${ id }`,{
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(id => dispatch({
+                type: "DELETE_ALUMNI_SUCCESS",
+                payload: id
+            }));
+    };
+};
