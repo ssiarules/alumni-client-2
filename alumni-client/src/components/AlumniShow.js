@@ -13,7 +13,7 @@ const StyledButton = styled.button`
 class AlumniShow extends Component {
 
     delete = () => {
-        this.props.deleteAlumni(this.props.alumni.id);
+        this.props.deleteAlumni(this.props.alumni.id,this.props.history);
     };
 
     render() {
@@ -32,7 +32,7 @@ class AlumniShow extends Component {
                 <p> { alumni.currentlyLiving }</p>
                 <p> { alumni.hobbies }</p>
                 <StyledButton onClick={ this.delete }>
-                    Delete
+                    <strong> Delete </strong>
                 </StyledButton>
             </div >
         )

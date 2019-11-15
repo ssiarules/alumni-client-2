@@ -17,7 +17,7 @@ class NewAlumniForm extends Component {
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
-        })
+        });
     };
 
     submit = e => {
@@ -30,19 +30,19 @@ class NewAlumniForm extends Component {
             <div>
                 <form onSubmit={ this.submit }>
                     <label> Name: </label>
-                    <input onChange={ this.handleChange } required type="text" name="name" value={ this.state.name } />
+                    <input onChange={ this.handleChange } required type="text" name="name" value={ this.state.name || '' } />
                     <label> Year Graduated: </label>
-                    <input onChange={ this.handleChange } required type="date" name="yearGraduated" defaultValue={ this.state.yearGraduated } />
+                    <input onChange={ this.handleChange } required type="date" name="yearGraduated" value={ this.state.yearGraduated || '' } />
                     <label> College: </label>
-                    <input onChange={ this.handleChange } type="text" name="college" defaultValue={ this.state.college } />
+                    <input onChange={ this.handleChange } type="text" name="college" value={ this.state.college  || ''} />
                     <label> Profession: </label>
-                    <input onChange={ this.handleChange } required type="text" name="profession" defaultValue={ this.state.profession } />
+                    <input onChange={ this.handleChange } required type="text" name="profession" value={ this.state.profession || '' } />
                     <label> Sports Played In High School: </label>
-                    <input onChange={ this.handleChange } type="text" name="sportPlayedInHighSchool" defaultValue={ this.state.sportPlayedInHighschool } />
+                    <input onChange={ this.handleChange } type="text" name="sportPlayedInHighSchool" value={ this.state.sportPlayedInHighSchool || '' } />
                     <label> Currently Living: </label>
-                    <input onChange={ this.handleChange } required type="text" name="currentlyLiving" defaultValue={ this.state.currentlyliving } />
+                    <input onChange={ this.handleChange } required type="text" name="currentlyLiving" value={ this.state.currentlyLiving  || ''} />
                     <label> Hobbies: </label>
-                    <input onChange={ this.handleChange } required type="text" name="hobbies" defaultValue={ this.state.hobbies } />
+                    <input onChange={ this.handleChange } required type="text" name="hobbies" value={ this.state.hobbies || '' } />
 
                     <button type="submit"> Create Alumni </button>
                 </form>
