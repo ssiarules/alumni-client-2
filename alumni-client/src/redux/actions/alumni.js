@@ -41,3 +41,23 @@ export const deleteAlumni = (id,history) => {
             });
     };
 };
+
+export const updateAlumni = (alumniObject,id,history) => {
+    const alumniToUpdate = { alumni: alumniObject };
+
+    return dispatch => {
+        return fetch(`http://localhost:3001/alumni/${ id }`,{
+            method: "PATCH",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(alumniToUpdate)
+        })
+            .then(res => res.json())
+            .then(updatedAlumni => {
+                dispatch({ type: "ALUMNI_UPDATE_SUCCESS",payload: updateAlumni });
+                history.push(`/alumni/${ updateAlumni.id }`);
+            });
+    };
+};

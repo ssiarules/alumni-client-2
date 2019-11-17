@@ -2,6 +2,8 @@ import React,{ Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteAlumni } from '../redux/actions/alumni';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 
 const StyledButton = styled.button`
     background-color: blue;
@@ -34,6 +36,12 @@ class AlumniShow extends Component {
                 <StyledButton onClick={ this.delete }>
                     <strong> Delete </strong>
                 </StyledButton>
+                <Link to={ `/alumni/${ alumni.id }/edit` } >
+                    <StyledButton onClick={ this.update }>
+                        <strong> Edit </strong>
+                    </StyledButton>
+                </Link>
+
             </div >
         )
     };

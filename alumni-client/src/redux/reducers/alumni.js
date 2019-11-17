@@ -6,7 +6,15 @@ export default (state = [],action) => {
         case "ALUMNI_CREATE_SUCCESS":
             return [...state,action.payload];
         case "ALUMNI_DELETE_SUCCESS":
-            return state.filter(alumni => alumni.id !== action.payload)
+            return state.filter(alumni => alumni.id !== action.payload);
+        case "ALUMNI_UPDATE_SUCCESS":
+            return state.map(alumni => {
+                if (alumni.id === action.payload.id) {
+                    return action.payload;
+                } else {
+                    return alumni;
+                }
+            });
         default:
             return state;
     }
