@@ -1,6 +1,9 @@
 import React,{ Component } from 'react'
 import { connect } from 'react-redux'
-import { createAlumni } from '../redux/actions/alumni'
+import { createAlumni } from '../redux/actions/alumni';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+
 
 
 class NewAlumniForm extends Component {
@@ -14,7 +17,7 @@ class NewAlumniForm extends Component {
         hobbies: '',
     };
 
-    handleChange = e => {
+    handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         });
@@ -29,26 +32,36 @@ class NewAlumniForm extends Component {
         return (
             <div>
                 <form onSubmit={ this.submit }>
-                    <label> Name: </label>
-                    <input onChange={ this.handleChange } required type="text" name="name" value={ this.state.name || '' } />
-                    <label> Year Graduated: </label>
-                    <input onChange={ this.handleChange } required type="date" name="yearGraduated" value={ this.state.yearGraduated || '' } />
-                    <label> College: </label>
-                    <input onChange={ this.handleChange } type="text" name="college" value={ this.state.college  || ''} />
-                    <label> Profession: </label>
-                    <input onChange={ this.handleChange } required type="text" name="profession" value={ this.state.profession || '' } />
-                    <label> Sports Played In High School: </label>
-                    <input onChange={ this.handleChange } type="text" name="sportPlayedInHighSchool" value={ this.state.sportPlayedInHighSchool || '' } />
-                    <label> Currently Living: </label>
-                    <input onChange={ this.handleChange } required type="text" name="currentlyLiving" value={ this.state.currentlyLiving  || ''} />
-                    <label> Hobbies: </label>
-                    <input onChange={ this.handleChange } required type="text" name="hobbies" value={ this.state.hobbies || '' } />
 
-                    <button type="submit"> Create Alumni </button>
+                    <label> Name: </label>
+                    <input onChange={ this.handleChange } required type="text" name="name" defaultValue={ this.state.name || '' } />
+                    <label> Year Graduated: </label>
+                    <input onChange={ this.handleChange } required type="date" name="yearGraduated" defaultValue={ this.state.yearGraduated || '' } />
+                    <label> College: </label>
+                    <input onChange={ this.handleChange } type="text" name="college" defaultValue={ this.state.college || '' } />
+                    <label> Profession: </label>
+                    <input onChange={ this.handleChange } required type="text" name="profession" defaultValue={ this.state.profession || '' } />
+                    <label> Sports Played In High School: </label>
+                    <input onChange={ this.handleChange } type="text" name="sportPlayedInHighSchool" defaultValue={ this.state.sportPlayedInHighSchool || '' } />
+                    <label> Currently Living: </label>
+                    <input onChange={ this.handleChange } required type="text" name="currentlyLiving" defaultValue={ this.state.currentlyLiving || '' } />
+                    <label> Hobbies: </label>
+                    <input onChange={ this.handleChange } required type="text" name="hobbies" defaultValue={ this.state.hobbies || '' } />
+
+
+                    <Button type="submit" variant="primary" size="small" active>
+                        Create Alumni
+                    </Button>
+
                 </form>
+
             </div>
         );
     }
 }
 
 export default connect(null,{ createAlumni })(NewAlumniForm);
+
+
+
+

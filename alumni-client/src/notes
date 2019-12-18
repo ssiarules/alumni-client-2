@@ -1,0 +1,59 @@
+ Current Feature 
+ - Create Alumni form 
+ - List of Alumni 
+ - Edit Alumni 
+ - Delete Alumni 
+ 
+ 
+ Additional Features 
+ - Create login via authentication
+ - Add image to main page 
+ - Add styling to forms 
+ - Create registration 
+ - Add Search filter to Alumni 
+ - Add Student form 
+ 
+ Advance features 
+ - Email notification: When students want to connect with Alumni
+ - 
+ 
+ 
+ 
+ 
+ New Alumni form
+ 
+ <Form onSubmit={ this.submit }>
+                    <Form.Group controlId="formName">
+                        <Form.Control type="textarea" placeholder="Enter Name" defaultValue={ this.state.name || '' } />
+                    </Form.Group>
+                    
+                    <Form.Group controlId="formYearGraduated">
+                        <Form.Control onChange={ this.handleChange } type="date" placeholder="date" defaultValue={ this.state.yearGraduated || '' } />
+                    </Form.Group>
+                   
+                   
+                    <Form.Group controlId="formCollege">
+                        <Form.Control onChange={ this.handleChange } type="text" placeholder="Enter College" defaultValue={ this.state.college || '' } />
+                    </Form.Group>
+                     
+                    <Form.Group controlId="formProfession">
+                        <Form.Control onChange={ this.handleChange } type="text" placeholder="Enter Profession" defaultValue={ this.state.profession || '' } />
+                    </Form.Group>
+                     
+                    <Form.Group controlId="formSportsPlayedInHighSchool">
+                        <Form.Control onChange={ this.handleChange } type="text" placeholder="Enter Sports Played In High School" defaultValue={ this.state.sportPlayedInHighSchool || '' } />
+                    </Form.Group>
+                     
+                    <Form.Group controlId="formCurrentlyLiving:">
+                        <Form.Control onChange={ this.handleChange } type="text" placeholder="Enter Currently Living" defaultValue={ this.state.currentlyLiving || '' } />
+                    </Form.Group>
+                    
+                    <Form.Group controlId="formHobbies:">
+                        <Form.Control onChange={ this.handleChange } type="text" placeholder="Enter Hobbies" defaultValue={ this.state.hobbies || '' } />
+                    </Form.Group>
+                    <Link to={ `/alumni` } >
+                        <Button type="submit" variant="primary" size="small" active>
+                            Create Alumni
+                         </Button>
+                    </Link>
+                </Form>
