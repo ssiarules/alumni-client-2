@@ -17,8 +17,6 @@ class AlumniList extends Component {
     }
 
 
-
-
     render() {
         const { count } = this.state
         return (
@@ -45,7 +43,6 @@ class AlumniList extends Component {
 
 
 }
-
 
 const mapStateToProps = (state) => {
     return {

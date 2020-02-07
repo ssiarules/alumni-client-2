@@ -7,6 +7,9 @@ class uscAlumni extends Component {
         return (
             <>
                 <h1> USC Alumni </h1>
+                { this.students.filter(students => (students
+
+                )) };
             </>
         )
     }
