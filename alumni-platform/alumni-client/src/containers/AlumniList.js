@@ -5,6 +5,7 @@ import Button from '../components/buttons/Button'
 
 class AlumniList extends Component {
 
+
     constructor (props) {
         super(props)
         this.state = {
@@ -16,6 +17,8 @@ class AlumniList extends Component {
     handleClick = () => {
         this.setState({ count: this.state.count + 1 })
     }
+
+    
 
 
 
@@ -37,7 +40,7 @@ class AlumniList extends Component {
                       { alumni.hobbies }
 
                        <div> < Button /> </div>
-        
+                        
                     </p>
 
                       

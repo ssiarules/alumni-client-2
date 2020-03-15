@@ -20,7 +20,7 @@ class AlumniContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        alumni: state
+        alumni: state.alumni
     }
 };
 

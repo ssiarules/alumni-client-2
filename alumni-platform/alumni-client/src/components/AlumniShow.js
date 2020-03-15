@@ -19,10 +19,13 @@ class AlumniShow extends Component {
     };
 
     render() {
-        const { alumni,found } = this.props
+       
+            const { alumni,found } = this.props
         if (!found) {
             return <p>No Alumni...</ p>
-        }
+        } 
+            
+        
         return (
             <div>
                 <h1> Alumni Info</h1>
@@ -46,10 +49,11 @@ class AlumniShow extends Component {
         )
     };
 };
-
+//The reason we need access to props is because one of the props is the ID based App.js routes  
 const mapStateToProps = (state,props) => {
+    //debugger
     const id = props.match.params.id;
-    const alumni = state.filter(alumni => alumni.id == id)[0];
+    const alumni = state.alumni.filter(alumni => alumni.id == id)[0];
     const found = !!alumni;
 
     //const found = Object.keys(alumni).length > 1;
