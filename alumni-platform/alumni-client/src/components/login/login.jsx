@@ -33,9 +33,10 @@ export class Login extends Component {
             password: password
           }
         },
-        { withCredentials: false }
+       // { withCredentials: false}
       )
       .then(response => {
+
 
         console.log("res from login", response);
         if (response.data.logged_in) {

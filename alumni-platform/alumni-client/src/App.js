@@ -25,6 +25,7 @@ class App extends React.Component {
     }
 
     this.handleLogin = this.handleLogin.bind(this)
+
   }
 
   handleLogin(data){
@@ -40,7 +41,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-
         <Router>
           <Navbar />
           <Switch>
@@ -53,6 +53,8 @@ class App extends React.Component {
             <Route path="/alumni/:id" component={ AlumniShow } />
              <Route path="/" render={ props => ( <Home { ...props} handleLogin={this.handleLogin} loggedInStatus={this.state.loggedInStatus} /> )} />
           {/* <Route path="/" component={ Home } /> */}
+
+          
 
        </Switch>
       

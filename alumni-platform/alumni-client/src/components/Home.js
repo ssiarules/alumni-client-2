@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import {Login, Signup } from '../components/login/index';
+import LoginFacebook from '../components/login/Facebook'
+
 
 
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
@@ -13,7 +15,9 @@ constructor(props){
     this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
 }
 
+
 handleSuccessfulAuth = data => {
+    debugger
     //update parent component 
     //redirect the user 
     this.props.handleLogin(data)
@@ -37,14 +41,12 @@ const signupURL = "/signup"
             <Link to={signupURL} handleSuccessfulAuth={this.handleSuccessfulAuth}> Signup </Link>
            
             <hr /> 
-       
+
+          <LoginFacebook />
         
         <Switch>
-
              <Route path={'/login'} handleSuccessfulAuth={this.handleSuccessfulAuth}> < Login /> </Route>
              <Route path={'/signup'} handleSuccessfulAuth={this.handleSuccessfulAuth}> < Signup /> </Route>
-            
-  
          </Switch>
         </div>
 
