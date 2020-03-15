@@ -20,6 +20,7 @@ class EditAlumni extends Component {
     }
 
     componentDidUpdate(prevProps) {
+        console.log(prevProps)
         if (prevProps.alumni.name !== this.props.alumni.name) {
 
             this.setState({
@@ -42,7 +43,6 @@ class EditAlumni extends Component {
 
     update = e => {
         e.preventDefault();
-        debugger
         this.props.updateAlumni(this.state,this.props.alumni.id,this.props.history);
     };
 
@@ -74,7 +74,7 @@ class EditAlumni extends Component {
 
 const mapStateToProps = (state,props) => {
     const id = props.match.params.id;
-    const alumni = state.alumni.filter(alumni => alumni.id == id)[0] || {};
+    const alumni = state.alumni.filter(alumni => alumni.id == id)[0]|| {};
     return {
         alumni,
     };

@@ -1,21 +1,33 @@
+//"use strict"
+import {NavLink} from 'react-dom'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components';
+import { Nav, NavItem, Navbar, Badge} from 'react-bootstrap'
 
-const StyledNav = styled.nav`
-    li {
-        list-style: none; 
+
+export class NavbarMenu extends React.Component{
+    render(){
+        return(
+<Navbar inverse fixedTop bg="light" expand="lg">
+<Navbar.Header>
+        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+ <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="mr-auto">
+     
+    </Nav>
+    <Nav pullRight> 
+        
+    </Nav>
+</Navbar.Collapse>
+  </Navbar.Header>
+</Navbar>
+        );
     }
+}
 
-    ul {
-        display: flex;
-        justify-content: space-around;
-    }
-`;
+export default NavbarMenu;
 
-//list-style removes the bullets 
-
-
+/*
 const Navbar = () => (
     <StyledNav>
         <nav>
@@ -27,5 +39,4 @@ const Navbar = () => (
         </nav>
     </StyledNav>
 );
-
-export default Navbar
+*/

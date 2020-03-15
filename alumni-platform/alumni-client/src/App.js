@@ -6,13 +6,15 @@ import Home from './components/Home';
 import NewAlumniForm from "./components/NewAlumniForm";
 import AlumniShow from './components/AlumniShow';
 import EditAlumni from './components/EditAlumni';
-import Navbar from './components/Navbar';
+import Menu from './components/menu'
+//import {Navbar} from './components/Navbar';
 import AlumniList from './containers/AlumniList';
 import { connect } from 'react-redux';
 import { getAlumni } from './redux/actions/alumni';
 import AlumniContainer from './containers/AlumniContainer'
 //import {Login } from './components/login/index';
 import USCAlumni from './components/uscAlumni';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {
 
@@ -41,8 +43,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
+      <Menu />
         <Router>
-          <Navbar />
+        
           <Switch>
             
             <Route exact path="/alumni" component={ AlumniList } />

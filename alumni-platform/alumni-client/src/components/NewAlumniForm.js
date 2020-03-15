@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { createAlumni } from '../redux/actions/alumni';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import '../components/login/styles.css';
 
 
 
@@ -35,9 +36,68 @@ class NewAlumniForm extends Component {
        
     };
 
+    render(){
+        return(
+        
+<div>
+    <ul> 
+    <form onSubmit={this.submit}>
+    
+    <h1> New Alumni </h1>
 
+     <h2> Status:{this.props.loggedInStatus} </h2> 
+<li>
+    <label> Name:</label>
+    <input onChange={ this.handleChange } required type="text" name="name" defaultValue={ this.state.name || '' } /> 
+   </li>
+
+ <li>
+   <label> Year Graduated:</label>
+    <input onChange={ this.handleChange } required type="date" name="yearGraduated" defaultValue={ this.state.yearGraduated || '' } />
+  </li>
+
+ <li>
+   <label> College: </label>
+    <input onChange={ this.handleChange } required type="text" name="college" defaultValue={ this.state.college || '' } />
+  </li>
+
+ <li> 
+   <label>Profession: </label>
+    <input onChange={ this.handleChange } required type="text" name="profession" defaultValue={ this.state.profession || '' } />
+  </li>
+
+ <li>
+   <label> Sports Played In High School: </label>
+    <input onChange={ this.handleChange } type="text" name="sportPlayedInHighSchool" defaultValue={ this.state.sportPlayedInHighSchool || '' } />
+  </li>
+
+ <li>
+   <label> Currently Living: </label>
+     <input onChange={ this.handleChange } required type="text" name="currentlyLiving" defaultValue={ this.state.currentlyLiving || '' } />
+ </li>
+
+ <li>
+   <label> Hobbies: </label>
+    <input onChange={ this.handleChange } required type="text" name="hobbies" defaultValue={ this.state.hobbies || '' } />
+  </li>
+   
+  
+  <Button variant="primary" type="submit">
+    Create Alumni
+  </Button>
+</form>
+
+</ul>
+</div>
+            
+           
+        )
+    }
+
+
+    /*
     render() {
-        return (
+       // return (
             <div>
                 <form onSubmit={ this.submit }>
 
@@ -49,7 +109,7 @@ class NewAlumniForm extends Component {
                     <label> Year Graduated: </label>
                     <input onChange={ this.handleChange } required type="date" name="yearGraduated" defaultValue={ this.state.yearGraduated || '' } />
                     <label> College: </label>
-                    <input onChange={ this.handleChange } type="text" name="college" defaultValue={ this.state.college || '' } />
+                    <input onChange={ this.handleChange } required type="text" name="profession" defaultValue={ this.state.profession || '' } />
                     <label> Profession: </label>
                     <input onChange={ this.handleChange } required type="text" name="profession" defaultValue={ this.state.profession || '' } />
                     <label> Sports Played In High School: </label>
@@ -67,8 +127,9 @@ class NewAlumniForm extends Component {
                 </form>
 
             </div>
-        );
+     //   );
     }
+    */
 }
 
 export default connect(null, {createAlumni} )(NewAlumniForm);

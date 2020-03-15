@@ -1,11 +1,11 @@
 .App {
-  text-align: center;
+   text-align: center;
   background-color: lightgray;
   border: 1px solid #000;
   margin: 100px auto;
   display: table;
+ 
 }
-
 .App-logo {
   height: 40vmin;
 }
@@ -24,3 +24,4 @@
 .App-link {
   color: #09d3ac;
 }
+

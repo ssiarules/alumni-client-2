@@ -58,7 +58,7 @@ export const updateAlumni = (alumniObject,id,history) => {
         })
             .then(res => res.json())
             .then(updatedAlumni => {
-                dispatch({ type: "ALUMNI_UPDATE_SUCCESS",payload: updateAlumni });
+                dispatch({ type: "ALUMNI_UPDATE_SUCCESS", payload: updateAlumni });
                history.push(`/alumni/${ updateAlumni.id }`);
                //  history.push('/alumni');
             });

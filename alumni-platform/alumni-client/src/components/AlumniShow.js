@@ -19,11 +19,14 @@ class AlumniShow extends Component {
     };
 
     render() {
-       
-            const { alumni,found } = this.props
+       const { alumni,found } = this.props;
+
         if (!found) {
-            return <p>No Alumni...</ p>
+            return <p>Loading...</ p>
         } 
+        if (alumni && !found ){
+            return <p> Alumni Not Found </p>;
+        }
             
         
         return (
@@ -36,6 +39,7 @@ class AlumniShow extends Component {
                 <p> { alumni.sportPlayedInHighSchool }</p>
                 <p> { alumni.currentlyLiving }</p>
                 <p> { alumni.hobbies }</p>
+                
                 <StyledButton onClick={ this.delete }>
                     <strong> Delete </strong>
                 </StyledButton>
