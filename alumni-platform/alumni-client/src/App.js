@@ -43,9 +43,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-      <Menu />
-        <Router>
+      
+      
         
+        <Router>
+        <Menu />
           <Switch>
             
             <Route exact path="/alumni" component={ AlumniList } />

@@ -13,7 +13,7 @@ export default class LoginFacebook extends Component {
         console.log("Facebook btn clicked");
     }
 
-    responseFacebook = (response) => {
+    responseFacebook = (response, e) => {
         console.log(response);
         //when you console response in your console you will follow down to locate the data you want to render on the page to the user
        

@@ -5,26 +5,8 @@ import Button from '../components/buttons/Button'
 
 class AlumniList extends Component {
 
-
-    constructor (props) {
-        super(props)
-        this.state = {
-            count: 0
-        }
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick = () => {
-        this.setState({ count: this.state.count + 1 })
-    }
-
-    
-
-
-
-
     render() {
-        const { count } = this.state
+        
         return (
             <div> 
                 <h1>Alumni List: { this.props.alumni.length }  </h1>
@@ -54,6 +36,7 @@ class AlumniList extends Component {
 }
 
 const mapStateToProps = (state) => {
+    
     return {
         alumni: state.alumni
     }
@@ -61,8 +44,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(AlumniList);
 
-                        //<button onClick={ this.handleClick }> Count { this.state.count } </button>
-//{this.state.count}
-
-//<button onClick={this.handleClick}> {count} </button>
                         

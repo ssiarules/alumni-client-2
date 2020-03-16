@@ -55,36 +55,5 @@ const signupURL = "/signup"
 
 }
 
-/*
-function Home() {
-   
-    const URL = "/login"
-    
-    const signupURL = "/signup"
-
-    return (
-        <div>
-            <h1> Welcome to Irvington High School Alumni Platform!</h1> 
-
-           <Link to={URL}> Login </Link>
-             
-            <Link to={signupURL}> Signup </Link>
-            <hr /> 
-       
-        
-        <Switch>
-
-             <Route path={'/login'} > < Login /> </Route>
-             <Route path={'/signup'} > < Signup /> </Route>
-            
-  
-         </Switch>
-        </div>
-               
-    )
-}
-*/
-
 export default Home;
 
-/* const Home  = () => <h1> Welcome to Irvington High School Alumni Platform!</h1> */

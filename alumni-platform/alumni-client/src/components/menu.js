@@ -1,10 +1,11 @@
-//"use strict"
-
 import React, {Component} from 'react'
 import {NavLink} from 'react-dom'
 import { Nav, NavItem, Navbar, Badge } from 'react-bootstrap'
+import { connect } from 'react-redux'
 
  class Menu extends React.Component{
+    
+
     render(){
         return(
             <Navbar inverse fixedTop >
@@ -16,7 +17,7 @@ import { Nav, NavItem, Navbar, Badge } from 'react-bootstrap'
      < Nav pullRight>
       <Nav.Link href="/alumni/new">Create Alumni </Nav.Link>
         <Nav.Link href="/alumni"> Alumni List
-        <Badge> 1 </Badge></Nav.Link>
+        <Badge> { 1} </Badge></Nav.Link>
     </Nav>
    
   </Navbar.Collapse>
@@ -24,5 +25,6 @@ import { Nav, NavItem, Navbar, Badge } from 'react-bootstrap'
  )
  }
 }
+
 
 export default Menu;

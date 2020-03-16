@@ -1,5 +1,4 @@
 
-
 const alumniReducer = (state = [], action) => {
     switch (action.type) {
 

@@ -7,8 +7,6 @@ export const getAlumni = () => {
     };
 };
 
-
-
 export const createAlumni = (alumniObject, history) => {
     const alumniToCreate = { alumni: alumniObject };
     return dispatch => {
