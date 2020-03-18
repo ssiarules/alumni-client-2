@@ -17,7 +17,7 @@ import { connect } from 'react-redux'
      < Nav pullRight>
       <Nav.Link href="/alumni/new">Create Alumni </Nav.Link>
         <Nav.Link href="/alumni"> Alumni List
-        <Badge> { 1} </Badge></Nav.Link>
+       { /*<Badge> { 1} </Badge> */} </Nav.Link> 
     </Nav>
    
   </Navbar.Collapse>

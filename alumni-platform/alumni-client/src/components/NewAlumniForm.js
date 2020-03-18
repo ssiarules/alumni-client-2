@@ -7,10 +7,7 @@ import '../components/login/styles.css';
 
 class NewAlumniForm extends Component {
 
-    constructor(props){
-        super(props);
-    
-    }
+  
    state = {
         name: '',
         yearGraduated: '',

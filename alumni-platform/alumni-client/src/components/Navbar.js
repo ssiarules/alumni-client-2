@@ -15,7 +15,7 @@ export class NavbarMenu extends React.Component{
     <Nav className="mr-auto">
      
     </Nav>
-    <Nav pullRight> 
+    
         
     </Nav>
 </Navbar.Collapse>
